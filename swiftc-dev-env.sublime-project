@@ -1,0 +1,36 @@
+{
+    "folders":
+    [
+        {
+            "path": "./swift",
+            "name": "swift",
+            "follow_symlinks": true
+        },
+        {
+            "path": "./built",
+            "name": "builds",
+            "follow_symlinks": true
+        },
+        {
+            "path": "./",
+            "name": "project",
+            "folder_exclude_patterns": [
+                "$project_path/swift",
+                "$project_path/build",
+                "$project_path/built"
+            ]
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 2,
+        "translate_tabs_to_spaces": true
+    },
+    "build_systems":
+    [
+        {
+            "name": "CMake",
+            "shell_cmd": "$project_path/bin/build_current_branch.sh"
+        }
+    ]
+}
